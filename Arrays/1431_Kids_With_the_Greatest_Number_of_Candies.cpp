@@ -8,9 +8,13 @@ public:
 
         vector<bool> result;
 
-        for (int candy : candies) {
-            result.push_back(candy + extraCandies >= maxCandies);
-        }
+        for (int i = 0; i < candies.size(); i++)
+{
+    if (candies[i] + extraCandies >= maxCandies)
+        result.push_back(true);
+    else
+        result.push_back(false);
+}
 
         return result;
     }
